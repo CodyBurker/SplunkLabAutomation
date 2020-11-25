@@ -1,0 +1,25 @@
+# todo
+ - Write script to set up Splunk Environment
+   - Start Container
+     - Given Username
+     - Random free port
+     - New Volumes
+     - Accept License
+   - Copy License into container
+   - Output URL, username, password
+ - Write script to retrieve containers/passwords
+   - List all Splunk containers
+     - URL
+     - Usernames
+     - Passwords
+ - Write script to kill given container
+   - Stop, RM container
+   - Remove Volumes
+ - Add web GUI
+   - Decide on:
+     - Wooey
+     - Django
+     - Flask
+ - Containerize all of this
+   - Mount docker socket
+   - Install Docker python SDK with PIP 
