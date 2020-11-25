@@ -1,5 +1,7 @@
 import docker
 import random 
+import secrets
+from datetime import datetime
 # client = docker.from_env()
 # all_containers = client.containers.list()
 
@@ -16,10 +18,13 @@ def start_lab(user_name):
     for container in containers:
         for port in list(container.ports.values()):
             used_ports.append(port[0]["HostPort"])
-    
-    
-
-    
+    # Generate a random port not already in use:
+    found_port = False
+    while not found_port:
+        new_port = random.randrange(1024,65535)
+        found_port = not (new_port in used_ports)
+    # Generate a random password
+    pwd = secrets.token_hex(datetime.time.)
 
 # Test code
 start_lab("cody")
